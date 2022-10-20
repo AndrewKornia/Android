@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Login and Password</string>
+    <string name="login_enter">Введете логин</string>
+    <string name="password_enter">Введите пароль</string>
+    <string name="enter">Вход</string>
+    <string name="image">Картинка</string>
+
+</resources>
