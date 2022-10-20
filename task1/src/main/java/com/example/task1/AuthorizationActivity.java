@@ -1,16 +1,15 @@
 package com.example.task1;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Gravity;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 
 
-public class AuthorizationClass extends AppCompatActivity {
+public class AuthorizationActivity extends AppCompatActivity {
 
     EditText inputLogin;
     EditText inputPassword;
@@ -23,46 +22,47 @@ public class AuthorizationClass extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activit_authorization);
+        setContentView(R.layout.activity_authorization);
         initUI();
     }
 
     /**
-     * Метод назначает кнопке 
+     * Метод назначает кнопке
      */
-    private void authorization(){
-        findViewById(R.id.aa_buttonEnter).setOnClickListener(view->{
-                    SharedPreferences.Editor editor = pref.edit();
-                    editor.putString(keyForLogin, inputLogin.getText().toString());
-                    editor.putString(keyForPassword, inputPassword.getText().toString());
-                    editor.apply();
-                    showToast();
-                }
-                );
+    private void authorization() {
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putString(keyForLogin, inputLogin.getText().toString());
+        editor.putString(keyForPassword, inputPassword.getText().toString());
+        editor.apply();
+        showToast();
     }
-    
+
+
     /**
      * Метод создают обект класса SharedPreferences
      */
-    private void initUI(){
-        pref = getSharedPreferences(nameContainers,MODE_PRIVATE);
+    private void initUI() {
+        pref = getSharedPreferences(nameContainers, MODE_PRIVATE);
         inputLogin = findViewById(R.id.aa_login);
         inputPassword = findViewById(R.id.aa_password);
-        authorization();
         setLogAndPass();
+        findViewById(R.id.aa_buttonEnter).setOnClickListener(view -> {
+            authorization();
+        });
     }
 
     /**
-     *Метод возвращает сохраненную информацию в поля для ввода
+     * Метод возвращает сохраненную информацию в поля для ввода
      */
     private void setLogAndPass() {
         inputLogin.setText(pref.getString(keyForLogin, ""));
         inputPassword.setText(pref.getString(keyForPassword, ""));
     }
+
     /**
      * Метод создают всплывающее сообщение
      */
-    void showToast(){
+    void showToast() {
         Toast toast = Toast.makeText(getApplicationContext(),
                 "Вход разрешен", Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER, 0, 0);

@@ -23,10 +23,10 @@
         android:id="@+id/aa_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:text="@string/authorization_login"
-        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,28 +36,28 @@
         android:id="@+id/aa_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
         android:importantForAutofill="no"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:text="@string/authorization_password"
-        android:layout_marginTop="130dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/aa_buttonEnter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/authorization_enter"
         android:layout_marginTop="350dp"
         android:layout_marginBottom="50dp"
+        android:text="@string/authorization_enter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintVertical_bias="0.709" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
