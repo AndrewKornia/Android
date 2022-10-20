@@ -25,13 +25,10 @@ public class AuthorizationClass extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activit_authorization);
         initUI();
-        authorization();
-        setLogAndPass();
-
     }
 
     /**
-     * Метод для обработки нажатия кнопки и сохранения данных из полей
+     * Метод назначает кнопке 
      */
     private void authorization(){
         findViewById(R.id.aa_buttonEnter).setOnClickListener(view->{
@@ -51,6 +48,8 @@ public class AuthorizationClass extends AppCompatActivity {
         pref = getSharedPreferences(nameContainers,MODE_PRIVATE);
         inputLogin = findViewById(R.id.aa_login);
         inputPassword = findViewById(R.id.aa_password);
+        authorization();
+        setLogAndPass();
     }
 
     /**
