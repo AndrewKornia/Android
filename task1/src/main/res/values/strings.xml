@@ -4,5 +4,7 @@
     <string name="authorization_password">Введите пароль</string>
     <string name="authorization_enter">Вход</string>
     <string name="authorization_image">Картинка</string>
+    <string name="authorization_error_login">Введите корректный логин</string>
+    <string name="authorization_error_password">Введите корректный пароль</string>
 
 </resources>
