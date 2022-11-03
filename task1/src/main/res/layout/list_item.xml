@@ -12,32 +12,53 @@
         android:layout_height="150dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="250dp"
         android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/al_title"
-        style="@style/AndroidText.Primary.Big"
-        android:layout_width="0dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.323"
         app:layout_constraintStart_toEndOf="@+id/al_car_logo"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Название автомобиля" />
+        tools:text="Title vehicle" />
 
     <TextView
-        android:id="@+id/al_description"
+        android:id="@+id/al_price"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/al_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="@+id/al_mileage"
+        app:layout_constraintTop_toBottomOf="@+id/al_year"
+        tools:text="Price vehicle " />
+
+    <TextView
+        android:id="@+id/al_year"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.772"
         app:layout_constraintStart_toStartOf="@+id/al_title"
-        app:layout_constraintTop_toBottomOf="@+id/al_title" />
+        app:layout_constraintTop_toBottomOf="@+id/al_mileage"
+        tools:text="Year vehicle" />
+
+    <TextView
+        android:id="@+id/al_mileage"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.653"
+        app:layout_constraintStart_toEndOf="@+id/al_car_logo"
+        app:layout_constraintTop_toBottomOf="@+id/al_title"
+        tools:text="Mileage vehicle" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
