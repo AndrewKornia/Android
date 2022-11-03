@@ -8,4 +8,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="Red">#FF1100</color>
+
+    <color name="brightGray">#373C46</color>
+    <color name="manatee">#9B9DA2</color>
+    <color name="colorInversedText">#CACACA</color>
 </resources>

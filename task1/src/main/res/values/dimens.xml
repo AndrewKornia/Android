@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- fonts-->
+
+    <!--mini-->
+    <dimen name="font_size_little">10sp</dimen>
+    <!--small-->
+    <dimen name="font_size_small">12sp</dimen>
+    <!--normal-->
+    <dimen name="font_size_normal">14sp</dimen>
+    <!--pre-big-->
+    <dimen name="font_size_pre_big">15sp</dimen>
+    <!--big-->
+    <dimen name="font_size_big">16sp</dimen>
+    <!--pre-large-->
+    <dimen name="font_size_pre_large">17sp</dimen>
+    <!--large-->
+    <dimen name="font_size_large">18sp</dimen>
+    <!--extra-large-->
+    <dimen name="font_size_extra_large">20sp</dimen>
+    <!--pre-huge-->
+    <dimen name="font_size_pre_huge">22sp</dimen>
+    <!--pre-huge-->
+    <dimen name="font_size_xhuge">22sp</dimen>
+    <!--pre-huge-->
+    <dimen name="font_size_highest">40sp</dimen>
+
+</resources>

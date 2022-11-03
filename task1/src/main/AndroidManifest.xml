@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_launcher_background"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Task1">
+        android:theme="@style/AndroidTheme">
 
         <activity
             android:name=".CatalogCar"

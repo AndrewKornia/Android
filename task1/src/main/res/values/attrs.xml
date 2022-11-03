@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="AndroidColorInversedText" format="color" />
+    <attr name="AndroidColorPrimaryText" format="color" />
+    <attr name="AndroidColorSecondaryText" format="color" />
+</resources>

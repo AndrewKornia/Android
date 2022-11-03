@@ -1,6 +1,6 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
-    <style name="Theme.Task1" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="AndroidTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -9,8 +9,25 @@
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+
+        <item name="AndroidColorPrimaryText">@color/brightGray</item>
+        <item name="AndroidColorSecondaryText">@color/manatee</item>
+        <item name="AndroidColorInversedText">@color/colorInversedText</item>
     </style>
+
+    <style name="AndroidText">
+        <item name="android:textColor">?attr/AndroidColorPrimaryText</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="AndroidText.Primary">
+        <item name="android:textColor">?attr/AndroidColorPrimaryText</item>
+    </style>
+
+    <style name="AndroidText.Primary.Big">
+        <item name="android:textSize">@dimen/font_size_big</item>
+    </style>
+
 </resources>
