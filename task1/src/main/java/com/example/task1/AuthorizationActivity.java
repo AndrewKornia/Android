@@ -5,11 +5,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -25,31 +23,57 @@ public class AuthorizationActivity extends AppCompatActivity {
     private final String keyForLogin = "keyName";
     private final String keyForPassword = "keyPassword";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authorization);
         initUI();
+    }
 
 
+    /**
+     * Метод предупреждает о некорректных введеных данных и в случае их отсутсвия переходит на другой экран сохраняя инфо о пользавателе
+     */
+    private void authorization() {
+        if (!isLoginValid()) {
+            aa_errorLogin = findViewById(R.id.aa_errorLogin);
+            aa_errorLogin.setVisibility(View.VISIBLE);
+            inputLogin.addTextChangedListener(watcherLogin);
+
+        } else if (!isPasswordValid()) {
+            aa_errorPassword = findViewById(R.id.aa_errorPassword);
+            aa_errorPassword.setVisibility(View.VISIBLE);
+            inputPassword.addTextChangedListener(watcherPassword);
+
+        } else {
+            saveInfoAboutUser();
+            createActivity();
+        }
     }
 
     /**
-     * Метод назначает кнопке
+     * Сохранение инфо о пользвователе
      */
-    private void authorization() {
+    private void saveInfoAboutUser() {
         SharedPreferences.Editor editor = pref.edit();
         editor.putString(keyForLogin, inputLogin.getText().toString());
         editor.putString(keyForPassword, inputPassword.getText().toString());
         editor.apply();
-        validation();
+    }
+
+    /**
+     * Создание новаго Activity
+     */
+    private void createActivity() {
+        Intent intent = new Intent(this, CatalogCar.class);
+        intent.putExtra("login",pref.getString(keyForLogin,""));
+        startActivity(intent);
+
 
     }
 
-
     /**
-     * Метод создают обект класса SharedPreferences
+     * Метод создают обект класса SharedPreferences и устанвливает слушатель нажатия на кнопку
      */
     private void initUI() {
         pref = getSharedPreferences(nameContainers, MODE_PRIVATE);
@@ -59,57 +83,39 @@ public class AuthorizationActivity extends AppCompatActivity {
         findViewById(R.id.aa_buttonEnter).setOnClickListener(view -> {
             authorization();
         });
-
-
     }
 
     /**
      * Метод возвращает сохраненную информацию в поля для ввода
      */
     private void setLogAndPass() {
-
         inputLogin.setText(pref.getString(keyForLogin, ""));
         inputPassword.setText(pref.getString(keyForPassword, ""));
-
 
     }
 
     /**
-     * Метод создают всплывающее сообщение
+     * Проверка валидноссти поля Login
+     *
+     * @return true/false
      */
-    void showToast() {
-        Toast toast = Toast.makeText(getApplicationContext(),
-                "Вход разрешен", Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.CENTER, 0, 0);
-        toast.show();
+    private boolean isLoginValid() {
+        return inputLogin.getText().toString().length() >= 8;
     }
 
-    private void validation() {
-        boolean chekLengthKeyForLogin = pref.getString(keyForLogin, "").length() < 8;
-        boolean chekLengthKeyForPassword = pref.getString(keyForPassword, "").length() < 8;
-        if (chekLengthKeyForLogin) {
-            aa_errorLogin = findViewById(R.id.aa_errorLogin);
-            aa_errorLogin.setVisibility(View.VISIBLE);
-
-
-        } else if (chekLengthKeyForPassword) {
-            aa_errorPassword = findViewById(R.id.aa_errorPassword);
-            aa_errorPassword.setVisibility(View.VISIBLE);
-
-
-        } else {
-            showToast();
-            Intent intent = new Intent(this, Activity2.class);
-            startActivity(intent);
-
-
-        }
-        inputLogin.addTextChangedListener(watcherLogin);
-        inputPassword.addTextChangedListener(watcherPassword);
-
-
+    /**
+     * Проверка валидноссти поля Password
+     *
+     * @return true/false
+     */
+    private boolean isPasswordValid() {
+        return inputPassword.getText().toString().length() >= 8;
     }
 
+
+    /**
+     * Создание обстрктного класса TextWatcher и реализауия метода onTextChanged  для inputLogin
+     */
     private final TextWatcher watcherLogin = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -127,6 +133,10 @@ public class AuthorizationActivity extends AppCompatActivity {
 
         }
     };
+
+    /**
+     * Создание обстрктного класса TextWatcher и реализация метода onTextChanged для inputPassword
+     */
     private final TextWatcher watcherPassword = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
