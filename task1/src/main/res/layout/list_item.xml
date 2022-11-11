@@ -4,61 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-
-
     <ImageView
         android:id="@+id/al_car_logo"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/avatars" />
-
     <TextView
         android:id="@+id/al_title"
-        android:layout_width="150dp"
+        style="@style/AndroidText.Primary.Big"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="@dimen/font_size_normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.323"
         app:layout_constraintStart_toEndOf="@+id/al_car_logo"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Title vehicle" />
-
-    <TextView
-        android:id="@+id/al_price"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toStartOf="@+id/al_mileage"
-        app:layout_constraintTop_toBottomOf="@+id/al_year"
-        tools:text="Price vehicle " />
-
-    <TextView
-        android:id="@+id/al_year"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.772"
-        app:layout_constraintStart_toStartOf="@+id/al_title"
-        app:layout_constraintTop_toBottomOf="@+id/al_mileage"
-        tools:text="Year vehicle" />
-
     <TextView
         android:id="@+id/al_mileage"
-        android:layout_width="220dp"
+        style="@style/AndroidText.Primary.Big"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.653"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="@dimen/font_size_normal"
+        android:layout_marginHorizontal="16dp"
         app:layout_constraintStart_toEndOf="@+id/al_car_logo"
         app:layout_constraintTop_toBottomOf="@+id/al_title"
         tools:text="Mileage vehicle" />
+    <TextView
+        android:id="@+id/al_year"
+        style="@style/AndroidText.Primary.Big"
+        android:layout_width="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size_normal"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/al_car_logo"
+        app:layout_constraintTop_toBottomOf="@+id/al_mileage"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Year vehicle" />
+    <TextView
+        android:id="@+id/al_price"
+        style="@style/AndroidText.Primary.Big"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textSize="@dimen/font_size_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/al_car_logo"
+        app:layout_constraintTop_toBottomOf="@+id/al_year"
+        tools:text="Price vehicle" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

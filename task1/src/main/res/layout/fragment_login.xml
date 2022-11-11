@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/aa_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:contentDescription="@string/authorization_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_login_loga" />
+    <EditText
+        android:id="@+id/aa_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:autofillHints=""
+        android:hint="@string/authorization_login"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aa_imageView" />
+    <TextView
+        android:id="@+id/aa_errorLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/authorization_error_login"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="7sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/aa_login"
+        app:layout_constraintTop_toBottomOf="@id/aa_login"
+        tools:ignore="SmallSp"
+        tools:visibility="visible" />
+    <EditText
+        android:id="@+id/aa_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/authorization_password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aa_login" />
+    <TextView
+        android:id="@+id/aa_errorPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="49dp"
+        android:text="@string/authorization_error_password"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="7sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/aa_password"
+        app:layout_constraintTop_toBottomOf="@id/aa_password"
+        tools:ignore="SmallSp"
+        tools:visibility="visible" />
+    <Button
+        android:id="@+id/aa_buttonEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:minWidth="200dp"
+        android:text="@string/authorization_enter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aa_password" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

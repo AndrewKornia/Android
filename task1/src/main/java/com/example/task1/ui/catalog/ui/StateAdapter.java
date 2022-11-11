@@ -1,4 +1,4 @@
-package com.example.task1;
+package com.example.task1.ui.catalog.ui;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,10 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.task1.R;
 
 import java.util.List;
 
-import models.Vehicle;
+import com.example.task1.models.Vehicle;
 
 public class StateAdapter extends RecyclerView.Adapter<StateAdapter.ViewHolder> {
 
@@ -28,42 +29,38 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.ViewHolder> 
         this.inflater = LayoutInflater.from(contextForLayoutInflater);
         this.context = contextForGlide;
     }
-
     @NonNull
     @Override
     public StateAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.list_item, parent, false);
         return new ViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(@NonNull StateAdapter.ViewHolder holder, int position) {
-        Vehicle vehicle1 = vehicles.get(position);
-        Glide.with(context).load(vehicle1.getImage()).into(holder.carImage);
-        holder.carTitle.setText(vehicle1.getTitle());
-        holder.carDescription.setText(vehicle1.builder());
-
-
+        Vehicle vehicleGGetHolder = vehicles.get(position);
+        Glide.with(context).load(vehicleGGetHolder.getImage()).into(holder.carImage);
+        holder.carTitle.setText(vehicleGGetHolder.getTitle());
+        holder.carYear.setText(String.valueOf(vehicleGGetHolder.getYear()));
+        holder.carMileage.setText(String.valueOf(vehicleGGetHolder.getMileage()));
+        holder.carPrice.setText(vehicleGGetHolder.getPrice());
     }
-
     @Override
     public int getItemCount() {
         return vehicles.size();
-
     }
-
-
     public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView carImage;
         TextView carTitle;
-        TextView carDescription;
-
+        TextView carYear;
+        TextView carMileage;
+        TextView carPrice;
         ViewHolder(View view) {
             super(view);
             carImage = view.findViewById(R.id.al_car_logo);
             carTitle = view.findViewById(R.id.al_title);
-            carDescription = view.findViewById(R.id.al_description);
+            carYear = view.findViewById(R.id.al_year);
+            carPrice = view.findViewById(R.id.al_price);
+            carMileage = view.findViewById(R.id.al_mileage);
         }
-
     }
 }

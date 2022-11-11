@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.task1.ui.login.ui.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/toCatalogCarFragment"
+            app:destination="@id/catalogCarFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/catalogCarFragment"
+        android:name="com.example.task1.ui.catalog.ui.CatalogCarFragment"
+        tools:layout="@layout/fragment_catalog_car">
+        <argument
+            android:name="userLogin"
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>

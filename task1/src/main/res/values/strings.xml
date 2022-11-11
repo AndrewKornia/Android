@@ -7,7 +7,6 @@
     <string name="authorization_error_login">Введите корректный логин</string>
     <string name="authorization_error_password">Введите корректный пароль</string>
     <string name="login">Login</string>
-
-
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="graphAuthorizationAndCatalog"> Blank fragment</string>
 </resources>

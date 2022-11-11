@@ -13,12 +13,12 @@
         android:theme="@style/AndroidTheme">
 
         <activity
-            android:name=".CatalogCar"
+            android:name=".ui.catalog.ui.CatalogCar"
             android:exported="false" />
 
 
         <activity
-            android:name=".AuthorizationActivity"
+            android:name=".StartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
