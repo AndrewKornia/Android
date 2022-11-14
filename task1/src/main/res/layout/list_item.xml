@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
     <ImageView
-        android:id="@+id/al_car_logo"
+        android:id="@+id/li_car_logo"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="15dp"
@@ -15,8 +16,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@tools:sample/avatars" />
+
     <TextView
-        android:id="@+id/al_title"
+        android:id="@+id/li_title"
         style="@style/AndroidText.Primary.Big"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -25,11 +27,13 @@
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="@dimen/font_size_normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/al_car_logo"
+        app:layout_constraintStart_toEndOf="@+id/li_car_logo"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
         tools:text="Title vehicle" />
+
     <TextView
-        android:id="@+id/al_mileage"
+        android:id="@+id/li_mileage"
         style="@style/AndroidText.Primary.Big"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -37,11 +41,13 @@
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="@dimen/font_size_normal"
         android:layout_marginHorizontal="16dp"
-        app:layout_constraintStart_toEndOf="@+id/al_car_logo"
-        app:layout_constraintTop_toBottomOf="@+id/al_title"
+        app:layout_constraintStart_toEndOf="@+id/li_car_logo"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toBottomOf="@+id/li_title"
         tools:text="Mileage vehicle" />
+
     <TextView
-        android:id="@+id/al_year"
+        android:id="@+id/li_year"
         style="@style/AndroidText.Primary.Big"
         android:layout_width="0dp"
         android:layout_marginHorizontal="16dp"
@@ -49,12 +55,13 @@
         android:textSize="@dimen/font_size_normal"
         android:textColor="@color/design_default_color_on_secondary"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/al_car_logo"
-        app:layout_constraintTop_toBottomOf="@+id/al_mileage"
+        app:layout_constraintStart_toEndOf="@+id/li_car_logo"
+        app:layout_constraintTop_toBottomOf="@+id/li_mileage"
         app:layout_constraintVertical_chainStyle="packed"
         tools:text="Year vehicle" />
+    
     <TextView
-        android:id="@+id/al_price"
+        android:id="@+id/li_price"
         style="@style/AndroidText.Primary.Big"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -62,8 +69,9 @@
         android:textColor="@color/design_default_color_on_secondary"
         android:textSize="@dimen/font_size_normal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/al_car_logo"
-        app:layout_constraintTop_toBottomOf="@+id/al_year"
+        app:layout_constraintStart_toEndOf="@+id/li_car_logo"
+        app:layout_constraintTop_toBottomOf="@+id/li_year"
+        app:layout_constraintVertical_chainStyle = "packed"
         tools:text="Price vehicle" />
 
 

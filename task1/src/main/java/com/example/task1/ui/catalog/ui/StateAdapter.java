@@ -56,11 +56,11 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.ViewHolder> 
         TextView carPrice;
         ViewHolder(View view) {
             super(view);
-            carImage = view.findViewById(R.id.al_car_logo);
-            carTitle = view.findViewById(R.id.al_title);
-            carYear = view.findViewById(R.id.al_year);
-            carPrice = view.findViewById(R.id.al_price);
-            carMileage = view.findViewById(R.id.al_mileage);
+            carImage = view.findViewById(R.id.li_car_logo);
+            carTitle = view.findViewById(R.id.li_title);
+            carYear = view.findViewById(R.id.li_year);
+            carPrice = view.findViewById(R.id.li_price);
+            carMileage = view.findViewById(R.id.li_mileage);
         }
     }
 }

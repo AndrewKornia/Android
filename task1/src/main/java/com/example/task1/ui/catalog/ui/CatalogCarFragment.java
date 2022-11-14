@@ -30,11 +30,10 @@ public class CatalogCarFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_catalog_car,container,false);
-        login = view.findViewById(R.id.al_login);
-        recyclerView = view.findViewById(R.id.list_vehicle);
+        login = view.findViewById(R.id.fc_login);
+        recyclerView = view.findViewById(R.id.fc_list_vehicle);
         return view;
     }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

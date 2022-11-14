@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <ImageView
-        android:id="@+id/aa_imageView"
+        android:id="@+id/fl_imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -14,56 +15,62 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_login_loga" />
+
     <EditText
-        android:id="@+id/aa_login"
+        android:id="@+id/fl_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:autofillHints=""
         android:hint="@string/authorization_login"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textColorHint="#757575"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/aa_imageView" />
+        app:layout_constraintTop_toBottomOf="@id/fl_imageView" />
+
+
     <TextView
-        android:id="@+id/aa_errorLogin"
+        android:id="@+id/fl_errorLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/authorization_error_login"
         android:textColor="@color/design_default_color_error"
         android:textSize="7sp"
         android:visibility="gone"
-        app:layout_constraintStart_toStartOf="@id/aa_login"
-        app:layout_constraintTop_toBottomOf="@id/aa_login"
+        app:layout_constraintStart_toStartOf="@id/fl_login"
+        app:layout_constraintTop_toBottomOf="@id/fl_login"
         tools:ignore="SmallSp"
         tools:visibility="visible" />
+
     <EditText
-        android:id="@+id/aa_password"
+        android:id="@+id/fl_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:hint="@string/authorization_password"
         android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/aa_login" />
+        app:layout_constraintTop_toBottomOf="@id/fl_login" />
+
     <TextView
-        android:id="@+id/aa_errorPassword"
+        android:id="@+id/fl_errorPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="49dp"
         android:text="@string/authorization_error_password"
         android:textColor="@color/design_default_color_error"
         android:textSize="7sp"
         android:visibility="gone"
-        app:layout_constraintStart_toStartOf="@id/aa_password"
-        app:layout_constraintTop_toBottomOf="@id/aa_password"
+        app:layout_constraintStart_toStartOf="@id/fl_password"
+        app:layout_constraintTop_toBottomOf="@id/fl_password"
         tools:ignore="SmallSp"
         tools:visibility="visible" />
+
     <Button
-        android:id="@+id/aa_buttonEnter"
+        android:id="@+id/fl_buttonEnter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -71,6 +78,6 @@
         android:text="@string/authorization_enter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/aa_password" />
+        app:layout_constraintTop_toBottomOf="@id/fl_password" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
