@@ -47,7 +47,7 @@
         android:id="@+id/fl_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
         android:hint="@string/authorization_password"
         android:inputType="textPassword"
