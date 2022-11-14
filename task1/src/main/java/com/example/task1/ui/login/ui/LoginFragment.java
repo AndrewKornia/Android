@@ -116,7 +116,7 @@ public class LoginFragment extends Fragment {
      * @return login\null
      */
     private String getLoginIfValid(String login) {
-        if (login.length() > 8) {
+        if (login.length() >= 8) {
             return login;
         }
         fl_errorLogin.setVisibility(View.VISIBLE);
@@ -129,7 +129,7 @@ public class LoginFragment extends Fragment {
      * @return password\null
      */
     private String getPasswordIfValid(String password) {
-        if (password.length() > 8) {
+        if (password.length() >= 8) {
             return password;
         }
         fl_errorPassword.setVisibility(View.VISIBLE);
